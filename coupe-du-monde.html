@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Toutes les éditions de la Coupe du monde de football.">
+  <title>FootHistoire — Coupe du monde</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="donnees.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body data-page="coupe">
+<! c'est le début de la page avec le titre>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">FH</span>
+      <span>Foot<span>Histoire</span></span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+
+    <nav class="main-nav">
+      <a href="index.html">Ballon d'Or</a>
+      <a class="active" href="coupe-du-monde.html">Coupe du monde</a>
+    </nav>
+  </header>
+<! logo + le menu de l'interface
+  <main>
+    <section class="hero hero-world">
+      <div class="hero-content">
+        <p class="eyebrow">LA PLUS GRANDE SCÈNE DU FOOTBALL</p>
+        <h1>Coupe du monde</h1>
+        <p>
+          Depuis 1930, les nations écrivent l'histoire.
+          Retrouvez les champions et les finales de chaque édition.
+        </p>
+        <a class="button button-light" href="#editions">
+          Voir les éditions <span>↓</span>
+        </a>
+      </div>
+
+      <div class="hero-orb world-orb" aria-hidden="true">
+        <span>🏆</span>
+      </div>
+    </section>
+<! c'est la page d'accueil du début de la page
+    <section class="stats-grid" id="stats-coupe" aria-label="Statistiques de la Coupe du monde"></section>
+
+    <section class="section" id="editions">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">1930 — 2026</p>
+          <h2>Les éditions</h2>
+        </div>
+        <p>Filtrez les tournois par année ou par pays champion.</p>
+      </div>
+<ceci est le filtre édition de ma page selon les années
+      <div class="filters">
+        <label class="search-box">
+          <span>⌕</span>
+          <input
+            id="search-coupe"
+            type="search"
+            placeholder="Rechercher une année, un pays…"
+            autocomplete="off"
+<! c'est la barre de recherche selon la coupe du monde
+        </label>
+
+        <label class="select-wrap">
+          <span class="sr-only">Champion</span>
+          <select id="country-coupe">
+            <option value="all">Tous les champions</option>
+          </select>
+          <! elle c'est la nuance pour avoir seulement les champions
+        </label>
+
+        <label class="select-wrap">
+          <span class="sr-only">Tri</span>
+          <select id="sort-coupe">
+            <option value="desc">Plus récent d'abord</option>
+            <option value="asc">Plus ancien d'abord</option>
+          </select>
+          <! c'est le tri pour filtrer plus récent et plus ancien
+        </label>
+      </div>
+
+      <div id="coupe-list" class="world-grid" aria-live="polite"></div>
+
+      <p id="coupe-empty" class="empty-state" hidden>
+        Aucun résultat. Essayez une autre recherche.
+      </p>
+      <! c'est la ou elle va tenir en compte les filtres pour notre recherche
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="index.html">
+      <span class="brand-mark">FH</span>
+      <span>Foot<span>Histoire</span></span>
+    </a>
+    <p>Une mémoire des grandes dates du football.</p>
+    <span>© <span class="year-now"></span> FootHistoire</span>
+  </footer>
+  <! c'est la fin de la page
+
+</body>
+</html>

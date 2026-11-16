@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FootHistoire : découvrez les grands palmarès du football.">
+  <title>FootHistoire — Ballon d'Or</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="donnees.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body data-page="ballon">
+<! c'est le début de la page
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">FH</span>
+      <span>Foot<span>Histoire</span></span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+
+    <nav class="main-nav">
+      <a class="active" href="index.html">Ballon d'Or</a>
+      <a href="coupe-du-monde.html">Coupe du monde</a>
+    </nav>
+  </header>
+<! logo + menu de l'interface
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">LES LÉGENDES DU FOOTBALL</p>
+        <h1>Le Ballon d'Or</h1>
+        <p>
+          Des grands vainqueurs aux classements historiques,
+          remontez le fil de la plus célèbre récompense individuelle du football.
+        </p>
+        <a class="button button-light" href="#palmares">
+          Explorer le palmarès <span>↓</span>
+        </a>
+      </div>
+
+      <div class="hero-orb" aria-hidden="true">
+        <span>★</span>
+      </div>
+    </section>
+<! page d'acceuil du début de la page
+    <section class="stats-grid" id="stats-ballon" aria-label="Statistiques du Ballon d'Or"></section>
+
+    <section class="section" id="palmares">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">DE 1980 À AUJOURD'HUI</p>
+          <h2>Le palmarès</h2>
+        </div>
+        <p>Recherchez une édition ou filtrez les résultats.</p>
+      </div>
+<! c'est le filtre selon le palmarès édition de l'année recherché
+      <div class="filters">
+        <label class="search-box">
+          <span>⌕</span>
+          <input
+            id="search-ballon"
+            type="search"
+            placeholder="Rechercher une année, un joueur, un club…"
+            autocomplete="off"
+          >
+          <! c'est la recherche d'un nom de joueur dans le filtre ou la barre de recherche
+        </label>
+
+        <label class="select-wrap">
+          <span class="sr-only">Décennie</span>
+          <select id="decade-ballon">
+            <option value="all">Toutes les décennies</option>
+            <option value="1980">Années 1980</option>
+            <option value="1990">Années 1990</option>
+            <option value="2000">Années 2000</option>
+            <option value="2010">Années 2010</option>
+            <option value="2020">Années 2020</option>
+          </select>
+          <! c'est le filtre sur la décennies recherché
+        </label>
+
+        <label class="select-wrap">
+          <span class="sr-only">Tri</span>
+          <select id="sort-ballon">
+            <option value="desc">Plus récent d'abord</option>
+            <option value="asc">Plus ancien d'abord</option>
+          </select>
+          <! c'est le filtre sur le tri du plus récent d'abord ainsi que le plus ancien d'abord
+        </label>
+      </div>
+
+      <div id="ballon-list" class="award-grid" aria-live="polite"></div>
+      <p id="ballon-empty" class="empty-state" hidden>
+        Aucun résultat. Essayez une autre recherche.
+      </p>
+      <! c'est le message qui nous dis si notre recherche abouti a aucun résultat
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="index.html">
+      <span class="brand-mark">FH</span>
+      <span>Foot<span>Histoire</span></span>
+    </a>
+    <p>Une mémoire des grandes dates du football.</p>
+    <span>© <span class="year-now"></span> FootHistoire</span>
+  </footer>
+<! c'est la fin de la page
+</body>
+</html>
